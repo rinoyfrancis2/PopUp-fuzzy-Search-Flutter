@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   bool _isSearching;
 
-StateSetter _setState;
+  StateSetter _setState;
   @override
   void initState() {
     // TODO: implement initState
@@ -76,11 +76,10 @@ StateSetter _setState;
   void _funcSearch() {
     showDialog(
         context: context,
-
         builder: (BuildContext context) {
           return StatefulBuilder(
-            builder: (BuildContext context, StateSetter setState) {
-              _setState = setState;
+              builder: (BuildContext context, StateSetter setState) {
+            _setState = setState;
             return Dialog(
               child: Container(
                 height: 300,
@@ -106,11 +105,8 @@ StateSetter _setState;
                   ),
                 ),
               ),
-            
             );
-            }
-          );
-            
+          });
         });
   }
 
